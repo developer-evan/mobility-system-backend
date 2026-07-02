@@ -13,6 +13,7 @@ import { PaymentsModule } from './modules/payments/payments.module';
 import { ConfigModule } from '@nestjs/config';
 import configuration from './config/configuration';
 import { validationSchema } from './config/validation.schema';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { validationSchema } from './config/validation.schema';
     TripsModule,
     BookingsModule,
     PaymentsModule,
+    DatabaseModule,
   ],
   controllers: [AppController, AuthController],
   providers: [AppService, AuthService],
